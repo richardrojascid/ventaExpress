@@ -4,6 +4,10 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php
+include './lib/constantes.php';
+
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -17,24 +21,48 @@ and open the template in the editor.
     <body>
         
          <div id="contenedor">
-             <div id="titulo">
+             <div id="tituloSitio">
                  <div>
-                     <img src="img/logo.png" />
+                     <img src="img/logo.png" height="200px" width="220px"/>
                  </div>
              </div>
-            <div id="menu"></div>
-            <div id="contenido"></div>
+             <div id="tituloPagina">titulo pagina</div>
+             <div id="contenido">contenido</div>
+            <div id="menu"><?php include './menu.php' ; ?></div>
+            
+            
         </div>
     </body>
-</html>
+<script>
+        $("#solicitudIngresos").on( "click", function( event ) {
+            if(($("[id*=subsolicitudIngresos]").css("display")!="none")){
+                 $("[id*=subsolicitudIngresos]").css("display","none");
+            }
+            else{
+                $("[id*=subsolicitudIngresos]").show();
+                $("[id*=subsolicitudIngresos]").css("display","block");
+            }                
+        });
+        $("#solicitudInformes").on( "click", function( event ) {
+            if(($("[id*=subsolicitudInformes]").css("display")!="none")){
+                 $("[id*=subsolicitudInformes]").css("display","none");
+            }
+            else{
+                $("[id*=subsolicitudInformes]").show();
+                $("[id*=subsolicitudInformes]").css("display","block");
+            }    
+        });
+        $("#solicitudConsultas").on( "click", function( event ) {
+            if(($("[id*=subsolicitudConsultas]").css("display")!="none")){
+                 $("[id*=subsolicitudConsultas]").css("display","none");
+            }
+            else{
+                $("[id*=subsolicitudConsultas]").show();
+                $("[id*=subsolicitudConsultas]").css("display","block");
+            }    
+        });
+        $('[data-toggle="tooltip"]').tooltip(); 
+    </script>
 
-
-<html>
-    <head>
-        
-    </head>
-    <body>
-        
-       
-        
-    </body>
+</html>  
+            

@@ -7,6 +7,17 @@ and open the template in the editor.
     Created on : 06-04-2017, 13:06:11
     Author     : cetecom
 */
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+div#general{
+    width:900;
+    
+}
+
 a.submenu{
     /*margin: 0 0 0 20px;
     padding: 0 0 0 60px;*/
@@ -14,7 +25,7 @@ a.submenu{
     display:none;
 }
 
-a:hover{
+a.hover{
     background: black;
 }
 
@@ -28,23 +39,33 @@ a:hover{
 #contenedor{
     width:100%;
 }
-#titulo{
+#tituloSitio{
     width:100%;
-    height: 80px;
-    float: left;
+    height: 200px;
+    float: top;
     background: red;
 }
-#menu{
-    width: 19%;
-    height: 300px;
-    float: left;
-    position:absolute;
-    top:0; left:0;
-    background: yellowgreen;
+#tituloPagina{
+   margin-bottom: auto;
+   height: 150px;
+   width: 100%;
+   padding-left: 220px;
+   float:  right;
+   background: lightskyblue; 
 }
 #contenido{
-   width: 70%;
-   height: 500px; 
-   float: left;
-   background: yellow;
+   margin-bottom: auto;
+   height: 969px;
+   width: 100%;
+   padding-left: 220px;
+   float:  right;
+   background: blue;
+}
+#menu{
+    width: 220px;
+    height:100%;
+    float: left;
+    position:absolute;
+   
+    background: yellowgreen;
 }
